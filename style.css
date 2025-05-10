@@ -517,3 +517,40 @@ html {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
+.cv-download-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; /* adjust this to control spacing */
+}
+
+.lavender-cv-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background-color: #B57EDC;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.lavender-cv-button:hover {
+  background-color: #a25edc;
+  transform: translateY(-2px);
+}
+
+.lavender-cv-button i {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.lavender-cv-button:hover i {
+  transform: translateY(2px);
+}
