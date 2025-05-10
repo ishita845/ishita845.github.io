@@ -2,6 +2,43 @@
   --black: #121212;
   --gray-bg: #1f1f1f; /* or #2a2a2a if you want lighter */
 }
+body.light-mode {
+  --black: #ffffff;
+  --white: #121212;
+  --gray-bg: #f0f0f0;
+  --lavender: #7a49a5;
+  --accent: #6e2ca5;
+}
+button,
+a,
+.project-card,
+.nav-links li a,
+.hire-btn,
+.lavender-cv-button {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+section {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  will-change: opacity, transform;
+}
+@media (max-width: 768px) {
+  ...
+}
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+
+body.light-mode {
+  background-color: var(--black);
+  color: var(--white);
+}
+
 
 .section-dark {
   background-color: var(--black);
@@ -554,3 +591,31 @@ html {
 .lavender-cv-button:hover i {
   transform: translateY(2px);
 }
+@media (max-width: 768px) {
+  section {
+    padding: 40px 20px;
+    font-size: 16px;
+  }
+
+  .hero-left h1 {
+    font-size: 36px;
+  }
+
+  .hero-left h2 {
+    font-size: 18px;
+  }
+
+  .hero-img img {
+    max-width: 300px;
+  }
+
+  .skills-flex, .hero-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reveal {
+    transform: translateY(30px); /* a little less aggressive for mobile */
+  }
+}
+
