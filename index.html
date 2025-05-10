@@ -1,909 +1,303 @@
-:root {
-  --black: #121212;
-  --gray-bg: #1f1f1f; /* or #2a2a2a if you want lighter */
-}
-body.light-mode {
-  --black: #ffffff;
-  --white: #121212;
-  --gray-bg: #f0f0f0;
-  --lavender: #7a49a5;
-  --accent: #6e2ca5;
-}
-button,
-a,
-.project-card,
-.nav-links li a,
-.hire-btn,
-.lavender-cv-button {
-  transition: all 0.3s ease;
-}
-
-.project-card:hover {
-  transform: scale(1.02);
-}
-section {
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  will-change: opacity, transform;
-}
-@media (max-width: 768px) {
-  ...
-}
-body.fade-out {
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-
-body.light-mode {
-  background-color: var(--black);
-  color: var(--white);
-}
-
-
-.section-dark {
-  background-color: var(--black);
-}
-.section-gray {
-  background-color: var(--gray-bg);
-}
-:root {
-  --lavender: #c8a2c8;
-  --black: #121212;
-  --white: #ffffff;
-  --gray: #cccccc;
-  --accent: #b18fcf;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-#hero {
-  padding-top: 1rem; /* was possibly too large before */
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-color: var(--black);
-  color: var(--white);
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
-
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s forwards;
-  animation-delay: 0.3s;
-}
-
-/* Animation Keyframes */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Header */
-header {
-  background: var(--black);
-  padding: 20px 0;
-}
-.logo {
-  float: left;
-  color: var(--lavender);
-  font-size: 24px;
-}
-nav {
-  float: right;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-.nav-links li a {
-  color: var(--lavender);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-.nav-links li a:hover {
-  color: var(--accent);
-}
-header::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Hero with Animated Gradient */
-.hero-banner {
-  background: linear-gradient(to bottom, var(--black), #1c1c1c);
-  color: var(--white);
-  padding: 40px 0 60px; /* top 40px, bottom 60px (customize if needed) */
-}
-
-@keyframes gradientBG {
-  0% { background-position: 0% 50% }
-  50% { background-position: 100% 50% }
-  100% { background-position: 0% 50% }
-}
-.hero-grid {
-  align-items: flex-start;
-}
-section {
-  scroll-margin-top: 80px; /* matches your header height */
-}
-
-
-/* Shared Section Styles */
-.about, .projects, .skills, .contact {
-  padding: 30px 0;
-  opacity: 0;
-  transform: translateX(-30px);
-  animation: slideInLeft 1s forwards;
-}
-
-/* Titles Slide-In */
-h2 {
-  color: var(--lavender);
-  text-align: left;
-  margin-bottom: 20px;
-  opacity: 0;
-  transform: translateX(-50px);
-  animation: slideInLeft 1s ease forwards;
-}
-
-/* Adding delay for different sections */
-.about h2 {
-  animation-delay: 0.3s;
-}
-
-.projects h2 {
-  animation-delay: 0.4s;
-}
-
-.skills h2 {
-  animation-delay: 0.5s;
-}
-
-.contact h2 {
-  animation-delay: 0.6s;
-}
-
-/* Project Style */
-.project {
-  margin-bottom: 30px;
-}
-.project:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-/* Skills */
-.skills ul {
-  list-style: square;
-  margin-left: 20px;
-  animation: fadeInUp 3s ease forwards;
-}
-
-/* Contact */
-.contact a {
-  color: var(--lavender);
-  text-decoration: underline;
-  transition: color 0.3s;
-}
-.contact a:hover {
-  color: var(--accent);
-}
-
-/* Footer */
-footer {
-  background: var(--black);
-  color: var(--gray);
-  text-align: center;
-  padding: 20px 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-  }
-  .logo, nav {
-    float: none;
-    text-align: center;
-  }
-}
-.hero {
-  background: linear-gradient(-45deg, #1e1e1e, #2b2b2b, #2a2139, #3b2c45);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-  color: var(--lavender);
-  padding: 100px 0;
-}
-
-.hero-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.hero-text {
-  flex: 1;
-  min-width: 300px;
-  text-align: center;
-  animation: fadeInUp 1.2s ease forwards;
-}
-
-.hero-text h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.hero-img {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  justify-content: center;
-  animation: slideInLeft 1.2s ease forwards;
-}
-.hero-img img {
-  width: 100%;
-  max-width: 450px;
-  height: auto;
-  aspect-ratio: 4 / 5; /* Rectangle */
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(200, 162, 200, 0.4);
-  border: 3px solid var(--lavender);
-}
-
-
-
-/* Mobile stacking */
-@media (max-width: 768px) {
-  .hero-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.project-card {
-  perspective: 1000px;
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.project-card:hover .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  backface-visibility: hidden;
-  border: 2px solid var(--lavender);
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(200, 162, 200, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.card-front {
-  background-color: #2a2139;
-  color: var(--lavender);
-}
-
-.card-back {
-  background-color: var(--lavender);
-  color: var(--black);
-  transform: rotateY(180deg);
-}
-:root {
-  --primary-color: #121212;
-  --accent-color: #b18fcf;
-  --font-family: 'Lato', sans-serif;
-}
-
-body {
-  background-color: var(--primary-color);
-  color: #ffffff;
-  font-family: var(--font-family);
-}
-.project-card {
-  perspective: 1000px;
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.project-card:hover .card-inner {
-  transform: rotateX(180deg);
-}
-
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  backface-visibility: hidden;
-  border: 2px solid var(--lavender);
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(200, 162, 200, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.card-front {
-  background-color: #2a2139;
-  color: var(--lavender);
-}
-
-.card-back {
-  background-color: var(--lavender);
-  color: var(--black);
-  transform: rotateX(180deg);
-}
-.skills-section {
-  padding: 80px 0;
-  background-color: var(--black);
-  color: var(--white);
-}
-
-.skills-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
-  align-items: flex-start;
-}
-
-.skills-text {
-  flex: 1;
-  min-width: 280px;
-}
-
-.skills-text h2 {
-  color: var(--lavender);
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.skills-text p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--white);
-}
-
-.skills-bars {
-  flex: 1;
-  min-width: 280px;
-}
-
-.skill {
-  margin-bottom: 20px;
-}
-
-.skill-name {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 600;
-  color: var(--lavender);
-  margin-bottom: 5px;
-}
-
-.bar {
-  width: 100%;
-  background: #333;
-  height: 10px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.progress {
-  height: 100%;
-  background: var(--lavender);
-  border-radius: 5px;
-  width: 0;
-  transition: width 1.5s ease-in-out;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .skills-flex {
-    flex-direction: column;
-  }
-}
-.hero-banner {
-  background: linear-gradient(to bottom, var(--black), #1c1c1c);
-  color: var(--white);
-  padding: 0.2px 0;
-}
-
-.hero-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 60px;
-}
-
-.hero-left {
-  flex: 1;
-  min-width: 300px;
-}
-
-.hero-left h3 {
-  font-size: 18px;
-  color: var(--lavender);
-  margin-bottom: 10px;
-}
-
-.hero-left h1 {
-  font-size: 48px;
-  font-weight: 800;
-  color: var(--white);
-  margin-bottom: 10px;
-}
-
-.hero-left h2 {
-  font-size: 24px;
-  font-weight: 500;
-  color: var(--white);
-}
-
-.typing {
-  color: var(--lavender);
-  border-right: 2px solid var(--lavender);
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-  0%, 100% { border-color: var(--lavender); }
-  50% { border-color: transparent; }
-}
-
-.hire-btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 12px 25px;
-  background: var(--lavender);
-  color: var(--black);
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-
-.hire-btn:hover {
-  background: var(--accent);
-}
-
-.hero-right {
-  flex: 1;
-  text-align: center;
-}
-
-.hero-right img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Mobile view */
-@media (max-width: 768px) {
-  .hero-grid {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-}
-html {
-  scroll-behavior: smooth;
-}
-.nav-links a.active {
-  color: var(--accent);
-  border-bottom: 2px solid var(--accent);
-}
-.nav-links li a:focus {
-  color: var(--accent);
-  outline: 2px solid var(--accent);
-  outline-offset: 4px;
-}
-.cv-download-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px; /* adjust this to control spacing */
-}
-
-.lavender-cv-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  background-color: #B57EDC;
-  color: white;
-  text-decoration: none;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-.lavender-cv-button:hover {
-  background-color: #a25edc;
-  transform: translateY(-2px);
-}
-
-.lavender-cv-button i {
-  font-size: 18px;
-  transition: transform 0.3s ease;
-}
-
-.lavender-cv-button:hover i {
-  transform: translateY(2px);
-}
-@media (max-width: 768px) {
-  section {
-    padding: 40px 20px;
-    font-size: 16px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ishita Yadav | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<section id="projects" data-aos="fade-up">...</section>
+<body>
+<button id="themeToggle" aria-label="dark/light mode">🌓Theme</button>
+<script>
+  const toggleBtn = document.getElementById('themeToggle');
+  const body = document.body;
+
+  const setTheme = theme => {
+    body.className = theme;
+    localStorage.setItem('theme', theme);
+  };
+
+  toggleBtn.addEventListener('click', () => {
+    const newTheme = body.classList.contains('dark-mode') ? 'light-mode' : 'dark-mode';
+    setTheme(newTheme);
+  });
+
+  // Init
+  const savedTheme = localStorage.getItem('theme') || 'dark-mode';
+  setTheme(savedTheme);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+ <header>
+
+  </header>
+
+<section class="about me " id="about me " data-aos="fade-up">
+  <!-- Content -->
+</section>
+
+
+<section class="hero-banner" id="home">
+  <div class="container hero-grid">
+    <div class="hero-left">
+      <h3>Hello, my name is</h3>
+      <h1>Ishita Yadav</h1>
+      <h2>And I'm <span class="typing"></span></h2>
+
+      <a href="#contact" class="hire-btn">Hire me</a>
+    </div>
+        <div class="hero-img">
+     <img src="ishita-profile.png.jpeg" alt="Ishita Yadav Profile" />
+    </div>
+</section>
+
+
+
+
+
+
+
+
+  <!-- ✨ About Me -->
+<section class="about" id="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>
+      I am a <strong>third-year B.Tech Computer Science (AI & ML)</strong> student with a keen
+      interest in developing <strong>real-world solutions</strong> through innovative projects.
+      I have worked on applications involving <strong>AI-based proctoring</strong> and
+      <strong>gesture recognition</strong>, demonstrating a practical approach to learning
+      and implementation. Driven by curiosity, a problem-solving mindset, and a
+      passion for exploring the potential of emerging technologies, I’m always
+      looking for the next challenge!
+    </p>
+  </div>
+
+
+
+
+
+  <section class="projects" id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>AI-Based Proctoring</h3>
+          </div>
+          <div class="card-back">
+            <p>A scalable AI solution for monitoring online exams. It uses face count, head pose, and blink detection to identify suspicious behavior in real time.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Sign Language Interperator</h3>
+          </div>
+          <div class="card-back">
+            <p>A real-time interpreter that converts sign language hand gestures into readable text using computer vision and machine learning. It enhances accessibility for hearing-impaired users and promotes inclusive communication.y</p>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- Add more cards here if needed -->
+    </div>
+  </div>
+<section class="projects-section" id="projects" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <h3>AI-Based Proctoring System</h3>
+      <p><strong>What is it?</strong><br>
+     Developed an AI-powered proctoring system with face detection, gaze tracking, object detection, head pose estimation, and behavioral monitoring to ensure exam integrity. Integrated real-time alerts, activity logging, and role-based access for scalable online assessments.</p>
+      <p><strong>Technologies Used:</strong></p>
+      <ul class="project-tags">
+        <li>Dlib</li>
+        <li>YOLO</li>
+        <li>Tensorflow</li>
+        <li>OpenCV</li>
+        <li>Python</li>
+        <li>HTML</li>
+        <li>YOLO</li>
+      </ul>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <h3>Sign Language Interpreter</h3>
+      <p><strong>What is it?</strong><br>
+      Real-time interpreter that translates hand gestures into text for accessibility using machine learning and computer vision.</p>
+      <p><strong>Technologies Used:</strong></p>
+      <ul class="project-tags">
+        <li>MediaPipe</li>
+        <li>TensorFlow</li>
+        <li>Gesture Recognition</li>
+        <li>Computer Vision</li>
+        <li>NLP</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Add this in your HTML <head> -->
+  <!-- Add this to your HTML <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div class="cv-download-section">
+  <a href="assets/Ishita_cv.pdf" download class="lavender-cv-button">
+    <i class="fas fa-download"></i> Download CV
+  </a>
+</div>
+
+
+
+<section class="skills-section" id="skills">
+  <div class="container skills-flex">
+    <div class="skills-text">
+      <h2>My creative skills & experiences.</h2>
+      <p>
+       Through my coursework and personal projects, I have built a solid foundation in web development with HTML, CSS, and JavaScript. Additionally, I have gained proficiency in Python and C++, which has enabled me to work on various projects, including those involving AI and machine learning. I am also skilled in using design tools like Canva to create visually appealing graphics. My hands-on experience with these technologies has allowed me to build interactive applications, develop algorithms, and design engaging user interfaces.
+      </p>
+    </div>
+
+    <div class="skills-bars">
+      <div class="skill" data-percent="90">
+        <div class="skill-name">C++ <span>90%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" data-percent="95">
+        <div class="skill-name">Python <span>95%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" data-percent="90">
+        <div class="skill-name">HTML <span>90%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" data-percent="93">
+        <div class="skill-name">CSS <span>93%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" data-percent="95">
+        <div class="skill-name">AI <span>95%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" data-percent="90">
+        <div class="skill-name">Machine Learning <span>90%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" data-percent="87">
+        <div class="skill-name">Canva <span>87%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <section class="hobbies" id="hobbies">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li>Programming: C++ & Python</li>
+        <li>HTML,CSS</li>
+        <li>Libraries: TensorFlow, Keras, OpenCV, Dlib, MediaPipe,scikit-learn,YOLO</li>
+        <li>ML: Supervised & Unsupervised Learning, Model Evaluation</li>
+        <li>Computer Vision: Object Detection, Image Processing</li>
+        <li>Soft Skills: Problem Solving, Time Management, Communication</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:ishita15yadav2005@gmail.com">ishita15yadav2005@gmail.com</a></p>
+      <p>Phone: 9319540405</p>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Ishita Yadav</p>
+    </div>
+  </footer>
+
+
+<script>
+  function animateSkills() {
+    const skills = document.querySelectorAll('.skill');
+    const windowHeight = window.innerHeight;
+
+    skills.forEach(skill => {
+      const rect = skill.getBoundingClientRect();
+      if (rect.top < windowHeight - 100) {
+        const bar = skill.querySelector('.progress');
+        const percent = skill.getAttribute('data-percent');
+        bar.style.width = percent + '%';
+      }
+    });
   }
 
-  .hero-left h1 {
-    font-size: 36px;
+  window.addEventListener("scroll", animateSkills);
+  window.addEventListener("load", animateSkills);
+</script>
+<script>
+  const typingText = ["Freelancer", "AI Developer", "ML Enthusiast"];
+  let index = 0;
+  let charIndex = 0;
+  let typingElement = document.querySelector(".typing");
+
+  function type() {
+    if (charIndex < typingText[index].length) {
+      typingElement.textContent += typingText[index].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, 100);
+    } else {
+      setTimeout(erase, 1500);
+    }
   }
 
-  .hero-left h2 {
-    font-size: 18px;
+  function erase() {
+    if (charIndex > 0) {
+      typingElement.textContent = typingText[index].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, 50);
+    } else {
+      index = (index + 1) % typingText.length;
+      setTimeout(type, 500);
+    }
   }
 
-  .hero-img img {
-    max-width: 300px;
-  }
-
-  .skills-flex, .hero-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .reveal {
-    transform: translateY(30px); /* a little less aggressive for mobile */
-  }
-}
-#themeToggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: lavender;
-  color: #333;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  z-index: 1000;
-}.project-tags {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.project-tags li {
-  background-color: #d8cfff;
-  color: #222;
-  padding: 6px 14px;
-  font-size: 0.85rem;
-  border-radius: 20px;
-  font-weight: 500;
-}
-.project-card {
-  background-color: lavender;
-  color: #222;
-  border-radius: 10px;
-  padding: 25px;
-  margin-bottom: 40px; /* 👈 Adds vertical gap */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-}
-
-
-#themeToggle:hover {
-  background-color: #e6e6fa;
-  transform: scale(1.05);
-}.projects-section {
-  padding: 80px 20px;
-  background-color: lavender; /* 💜 Full lavender background */
-  color: #222;
-}
-
-.projects-section .section-title {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #4a004a;
-}
-
-.project-card {
-  background-color: white;
-  color: #222;
-  padding: 25px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-}
-
-.project-tags {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.project-tags li {
-  background-color: #ffffff;
-  color: #333;
-  padding: 6px 12px;
-  font-size: 0.85rem;
-  border-radius: 20px;
-}
-/* DARK MODE STYLES FOR PROJECT CARDS */
-.dark-mode .project-card {
-  background-color: #111111; /* deep black card */
-  color: #e6ccff;            /* soft lavender text */
-  border: 1px solid #b980f0; /* lavender border */
-  border-radius: 12px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease-in-out;
-}
-
-.dark-mode .project-card h3 {
-  color: #d9a7ff;
-}
-
-.dark-mode .project-tags li {
-  background-color: #2b2b3d;
-  color: #e6ccff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-right: 8px;
-  margin-bottom: 5px;
-  display: inline-block;
-}
-.project-card {
-  background-color: #4B296B;
-  color: #000000;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-/* Base styles (Light mode) */
-.projects h2,
-.projects p,
-.projects h3 {
-  color: #4B296B; /* Dark Lavender */
-}
-
-/* Dark Mode override */
-body.dark-mode .projects h2,
-body.dark-mode .projects p,
-body.dark-mode .projects h3 {
-  color: #E6CCF5; /* Light Lavender */
-}
-
-
-.project-tags li {
-  background-color: #f0f0f0;
-  color: #333;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-right: 8px;
-  display: inline-block;
-}
-/* DARK MODE lavender background */
-.dark-mode .projects-section {
-  background-color: #b980f0; /* lavender */
-}
-.dark-mode .projects-section {
-  background-color: #b980f0; /* lavender */
-}
-.hero-img img {
-  max-width: 160px; /* Adjust size as needed */
-  height: auto;
-  border-radius: 50%; /* Makes it circular */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease;
-}
-
-/* Optional hover effect */
-.hero-img img:hover {
-  transform: scale(1.05);
-}
-
-/* For responsive layout (center on small screens) */
-@media (max-width: 768px) {
-  .hero-img {
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .hero-img img {
-    margin: 0 auto;
-  }
-}
-.hero-img img {
-  max-width: 250px;
-  height: auto;
-  border-radius: 40px; /* Rounded corners instead of circle */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease;
-  border: 4px solid #b980f0; /* Optional: lavender border */
-}
-.hero-img {
-  position: relative;
-  top: -20px; /* Moves image upward */
-  text-align: center; /* Keeps it centered if needed */
-}
-/* Light Mode - dark purple text */
-.hero-banner h1,
-.hero-banner h3,
-.hero-banner h2,
-.hero-banner .typing {
-  color: #4b0082;
-}
-
-/* Dark Mode - light purple text */
-.dark-mode .hero-banner h1,
-.dark-mode .hero-banner h3,
-.dark-mode .hero-banner h2,
-.dark-mode .hero-banner .typing {
-  color: #d8b4f8;
-}
-/* LIGHT MODE: Light lavender background */
-.projects-section {
-  background-color: #f3e8ff; /* soft light lavender */
-  color: #1e1e2f;
-}
-
-/* DARK MODE: Deep lavender background */
-.dark-mode .projects-section {
-  background-color: #2A1F3C; /* rich dark lavender */
-  color: #ffffff;
-}
-
-/* Optional: Contrast text inside */
-.projects-section h2,
-.projects-section h3,
-.projects-section p,
-.projects-section li {
-  color: inherit;
-}
-/* LIGHT MODE — default */
-.card-front,
-.card-back {
-  color: #4B296B; /* Dark Lavender */
-}
-
-/* DARK MODE — when body has class "dark-mode" */
-body.dark-mode .card-front,
-body.dark-mode .card-back {
-  color: #E6CCF5; /* Light Lavender */
-}
-.card-front,
-.card-back {
-  background-color: #D8B7DD; /* light lavender-ish for light mode */
-}
-
-body.dark-mode .card-front,
-body.dark-mode .card-back {
-  background-color: #2A1F3C; /* deep lavender for dark mode */
-}
-/* Light Mode ONLY — make text white in project cards */
-body.light-mode .project-card {
-  color: white;
-}
-body.light-mode .project-tags li {
-  background-color: white;
-  color: #4B296B; /* Optional dark lavender for contrast */
-}
-/* Base styling */
-.hobbies {
-  padding: 40px 20px;
-  border-radius: 12px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Light Mode */
-body.light-mode .hobbies {
-  background-color: #F5EFFF; /* Light Lavender */
-  color: black;
-}
-
-body.light-mode .hobbies h2 {
-  color: #4B296B; /* Dark Lavender heading */
-}
-
-/* Dark Mode */
-body.dark-mode .hobbies {
-  background-color: #2A1F3C; /* Deep Lavender */
-  color: white;
-}
-
-body.dark-mode .hobbies h2 {
-  color: #E6CCF5; /* Light Lavender heading */
-}
-
-/* Optional: list bullets or paragraph styling */
-.hobbies ul {
-  list-style-type: square;
-  padding-left: 20px;
-}
+  document.addEventListener("DOMContentLoaded", type);
+</script>
 
 
 
+
+</body>
+</html>
