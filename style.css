@@ -1005,6 +1005,107 @@ body.dark-mode .hobbies h2 {
   font-size: 1.2rem;
   margin-top: 8px;
 }
+/* Light theme adjustments */
+.light-mode .project-section {
+  background-color: #f2f2f2; /* Light grey instead of pure white */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.light-mode .project-tags {
+  color: #3f3f3f; /* Darker text for visibility */
+}
+/* General section styling */
+.projects-section {
+  padding: 60px 20px;
+  background-color: #f2eaff; /* Slight lavender background */
+}
+
+/* Each card */
+.project-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+.project-card h3 {
+  margin-top: 0;
+  color: #4b0082;
+}
+
+/* Tags */
+.project-tags {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-tags li {
+  background-color: #eee0ff;
+  color: #4b0082;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.project-card {
+  background-color: #ffffff;
+  color: #2d2d2d; /* FIX: Ensure text is dark */
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.project-card p {
+  color: #333; /* FIX: Make sure paragraph text is visible */
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Headings */
+.project-card h3 {
+  margin-top: 0;
+  color: #4b0082;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Tags - now as rounded pills */
+.project-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.project-tags li {
+  background-color: #eee0ff;
+  color: #4b0082;
+  padding: 6px 14px;
+  border-radius: 9999px; /* Makes them look like capsules */
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
 
 
 
