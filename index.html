@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -72,14 +73,7 @@
   <div class="container">
     <h2>About Me</h2>
     <p>
-      I am a <strong>third-year B.Tech Computer Science (AI & ML)</strong> student with a keen
-      interest in developing <strong>real-world solutions</strong> through innovative projects.
-      I have worked on applications involving <strong>AI-based proctoring</strong> and
-      <strong>gesture recognition</strong>, demonstrating a practical approach to learning
-      and implementation. Driven by curiosity, a problem-solving mindset, and a
-      passion for exploring the potential of emerging technologies, I’m always
-      looking for the next challenge!
-    </p>
+      I am a<strong> B.Tech student pursuing Computer Science Engineering with a specialization in Artificial Intelligence and Machine Learning.</strong> Throughout my academic journey, I have developed and worked on various projects involving <strong>Machine learning and AI technologies</strong>, gaining hands-on experience with multiple tools and libraries. Alongside this, I also have knowledge of <strong>HTML and CSS</strong>, which I use to support the presentation aspects of my work. Passionate about solving real-world problems through technology, I am now ready to apply my skills in professional environments and contribute to meaningful innovations.    </p>
   </div>
 
 
@@ -94,7 +88,9 @@
       <div class="project-card">
         <div class="card-inner">
           <div class="card-front">
-            <h3>AI-Based Proctoring</h3>
+
+            <h3>AI-Based Proctoring</h3><div class="click-cue">👆</div>
+
           </div>
           <div class="card-back">
             <p>A scalable AI solution for monitoring online exams. It uses face count, head pose, and blink detection to identify suspicious behavior in real time.</p>
@@ -102,18 +98,43 @@
         </div>
       </div>
 
+
       <!-- Project Card 2 -->
       <div class="project-card">
         <div class="card-inner">
           <div class="card-front">
-            <h3>Sign Language Interperator</h3>
+
+            <h3>Sign Language Interperator</h3><div class="click-cue">👆</div>
           </div>
           <div class="card-back">
             <p>A real-time interpreter that converts sign language hand gestures into readable text using computer vision and machine learning. It enhances accessibility for hearing-impaired users and promotes inclusive communication.y</p>
           </div>
         </div>
       </div>
-      
+      <div class="project-card">
+  <div class="card-inner">
+    <div class="card-front">
+
+      <h3>Well Track</h3><div class="click-cue">👆</div>
+    </div>
+    <div class="card-back">
+      <p>Developed WellTrack, a secure healthcare platform  to facilitate appointment scheduling, prescription management, hospital comparisons, and direct communication with healthcare providers.</p>
+    </div>
+  </div>
+</div>
+<div class="project-card">
+  <div class="card-inner">
+    <div class="card-front">
+      <h3> Handwritten Digit Recognition using CNN (MNIST Dataset)<div class="click-cue">👆</div></h3>
+
+    </div>
+    <div class="card-back">
+      <p>Developed a Convolutional Neural Network (CNN) model to recognize handwritten digits (0-9) from the MNIST dataset.</p>
+    </div>
+  </div>
+</div>
+
+
 
       <!-- Add more cards here if needed -->
     </div>
@@ -126,8 +147,11 @@
     <div class="project-card">
       <h3>AI-Based Proctoring System</h3>
       <p><strong>What is it?</strong><br>
-     Developed an AI-powered proctoring system with face detection, gaze tracking, object detection, head pose estimation, and behavioral monitoring to ensure exam integrity. Integrated real-time alerts, activity logging, and role-based access for scalable online assessments.</p>
-      <p><strong>Technologies Used:</strong></p>
+Developed a real-time AI proctoring system that monitors students during online exams by streaming their webcam feed to the proctor's dashboard.
+
+Implemented face detection and video capture using OpenCV, enabling live surveillance and candidate verification.
+
+Designed a dual-login interface: one for candidates (test interface with background monitoring) and one for proctors (live video feed).      <p><strong>Technologies Used:</strong></p>
       <ul class="project-tags">
         <li>Dlib</li>
         <li>YOLO</li>
@@ -143,14 +167,48 @@
     <div class="project-card">
       <h3>Sign Language Interpreter</h3>
       <p><strong>What is it?</strong><br>
-      Real-time interpreter that translates hand gestures into text for accessibility using machine learning and computer vision.</p>
-      <p><strong>Technologies Used:</strong></p>
+Developed a real-time Sign Language Interpreter that translates hand gestures into corresponding text using a Convolutional Neural Network (CNN).
+
+Utilized OpenCV for live webcam capture and image preprocessing (resizing, thresholding, grayscale conversion).
+
+Trained the model on a dataset of sign language alphabets/numbers to classify gestures with high accuracy.
+
+Integrated the model into a GUI or terminal-based application that displays the predicted text in real-time.      <p><strong>Technologies Used:</strong></p>
       <ul class="project-tags">
         <li>MediaPipe</li>
         <li>TensorFlow</li>
         <li>Gesture Recognition</li>
         <li>Computer Vision</li>
         <li>NLP</li>
+      </ul>
+    </div>
+    <div class="project-card">
+      <h3>MNIST Handwritten Digit Recoginition</h3>
+      <p><strong>What is it?</strong><br>
+Built and trained a Convolutional Neural Network (CNN) model to classify handwritten digits using the MNIST dataset with 98%+ accuracy.
+
+Implemented data preprocessing, normalization, and data augmentation to enhance model performance.
+
+Optimized the model using techniques like Dropout, ReLU, Adam optimizer, and EarlyStopping to reduce overfitting.
+
+Visualized predictions using matplotlib and created a user input interface for real-time digit prediction.      <p><strong>Technologies Used:</strong></p>
+      <ul class="project-tags">
+
+        <li>Tensorflow</li>
+        <li>OpenCV</li>
+        <li>Python</li>
+        <li>Keras</li>
+        <li>Matplotlib</li>
+      </ul>
+    </div>
+        <div class="project-card">
+      <h3>Well Track</h3>
+      <p><strong>What is it?</strong><br>
+Ideated and contributed to the development of WellTrack, an innovative healthcare platform designed to empower patients with secure, instant access to their medical records, appointment scheduling, prescription management, and communication with healthcare providers. The platform includes advanced features such as hospital comparison tools (based on pricing, services, and success rates), first aid resources, and health education content—promoting informed decision-making, improved engagement, and cost-effective care delivery.      <p><strong>Technologies Used:</strong></p>
+      <ul class="project-tags">
+        <li>CSS</li>
+        <li>HTML</li>
+
       </ul>
     </div>
 
@@ -161,13 +219,7 @@
 
 <!-- Add this in your HTML <head> -->
   <!-- Add this to your HTML <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<div class="cv-download-section">
-  <a href="assets/Ishita_cv.pdf" download class="lavender-cv-button">
-    <i class="fas fa-download"></i> Download CV
-  </a>
-</div>
 
 
 
@@ -230,13 +282,20 @@
       </ul>
     </div>
   </section>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div class="cv-download-section">
+  <a href="assets/Ishita_cv.pdf" download class="lavender-cv-button">
+    <i class="fas fa-download"></i> Download CV
+  </a>
+</div>
 
 
   <section class="contact" id="contact">
     <div class="container">
       <h2>Contact Me</h2>
       <p>Email: <a href="mailto:ishita15yadav2005@gmail.com">ishita15yadav2005@gmail.com</a></p>
-      <p>Phone: 9319540405</p>
+
     </div>
   </section>
 
@@ -295,6 +354,8 @@
 
   document.addEventListener("DOMContentLoaded", type);
 </script>
+
+
 
 
 
