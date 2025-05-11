@@ -969,6 +969,42 @@ body.dark-mode .hobbies h2 {
     transform: translateY(0) scale(0.95);
   }
 }
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.card-inner {
+  padding: 20px;
+}
+
+.card-front h3 {
+  margin-top: 0;
+}
+
+.click-cue {
+  font-size: 1.2rem;
+  margin-top: 8px;
+}
 
 
 
