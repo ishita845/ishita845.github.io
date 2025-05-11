@@ -1,1 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ishita Yadav | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<section id="projects" data-aos="fade-up">...</section>
+<body>
+<button id="themeToggle" aria-label="dark/light mode">🌓Theme</button>
+<script>
+  const toggleBtn = document.getElementById('themeToggle');
+  const body = document.body;
+
+  const setTheme = theme => {
+    body.className = theme;
+    localStorage.setItem('theme', theme);
+  };
+
+  toggleBtn.addEventListener('click', () => {
+    const newTheme = body.classList.contains('dark-mode') ? 'light-mode' : 'dark-mode';
+    setTheme(newTheme);
+  });
+
+  // Init
+  const savedTheme = localStorage.getItem('theme') || 'dark-mode';
+  setTheme(savedTheme);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+ <header>
+
+  </header>
+
+<section class="about me " id="about me " data-aos="fade-up">
+  <!-- Content -->
+</section>
+
+
+<section class="hero-banner" id="home">
+  <div class="container hero-grid">
+    <div class="hero-left">
+      <h3>Hello, my name is</h3>
+      <h1>Ishita Yadav</h1>
+      <h2>And I'm <span class="typing"></span></h2>
+
+      <a href="#contact" class="hire-btn">Hire me</a>
+    </div>
+        <div class="hero-img">
+     <img src="ishita-profile.png.jpeg" alt="Ishita Yadav Profile" />
+    </div>
+</section>
+
+
+
+
+
+
+
+
+  <!-- ✨ About Me -->
+<section class="about" id="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>
+      I am a<strong> B.Tech student pursuing Computer Science Engineering with a specialization in Artificial Intelligence and Machine Learning.</strong> Throughout my academic journey, I have developed and worked on various projects involving <strong>Machine learning and AI technologies</strong>, gaining hands-on experience with multiple tools and libraries. Alongside this, I also have knowledge of <strong>HTML and CSS</strong>, which I use to support the presentation aspects of my work. Passionate about solving real-world problems through technology, I am now ready to apply my skills in professional environments and contribute to meaningful innovations.    </p>
+  </div>
+
+
+
+
+
+  <section class="projects" id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+
+            <h3>AI-Based Proctoring</h3><div class="click-cue">👆</div>
+
+          </div>
+          <div class="card-back">
+            <p>A scalable AI solution for monitoring online exams. It uses face count, head pose, and blink detection to identify suspicious behavior in real time.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+
+            <h3>Sign Language Interperator</h3><div class="click-cue">👆</div>
+          </div>
+          <div class="card-back">
+            <p>A real-time interpreter that converts sign language hand gestures into readable text using computer vision and machine learning. It enhances accessibility for hearing-impaired users and promotes inclusive communication.y</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+  <div class="card-inner">
+    <div class="card-front">
+
+      <h3>Well Track</h3><div class="click-cue">👆</div>
+    </div>
+    <div class="card-back">
+      <p>Developed WellTrack, a secure healthcare platform  to facilitate appointment scheduling, prescription management, hospital comparisons, and direct communication with healthcare providers.</p>
+    </div>
+  </div>
+</div>
+<div class="project-card">
+  <div class="card-inner">
+    <div class="card-front">
+      <h3> Handwritten Digit Recognition using CNN (MNIST Dataset)<div class="click-cue">👆</div></h3>
+
+    </div>
+    <div class="card-back">
+      <p>Developed a Convolutional Neural Network (CNN) model to recognize handwritten digits (0-9) from the MNIST dataset.</p>
+    </div>
+  </div>
+</div>
+
+
+
+      <!-- Add more cards here if needed -->
+    </div>
+  </div>
+<section class="projects-section" id="projects" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <h3>AI-Based Proctoring System</h3>
+      <p><strong>What is it?</strong><br>
+Developed a real-time AI proctoring system that monitors students during online exams by streaming their webcam feed to the proctor's dashboard.
+
+Implemented face detection and video capture using OpenCV, enabling live surveillance and candidate verification.
+
+Designed a dual-login interface: one for candidates (test interface with background monitoring) and one for proctors (live video feed).      <p><strong>Technologies Used:</strong></p>
+      <ul class="project-tags">
+        <li>Dlib</li>
+        <li>YOLO</li>
+        <li>Tensorflow</li>
+        <li>OpenCV</li>
+        <li>Python</li>
+        <li>HTML</li>
+        <li>YOLO</li>
+      </ul>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <h3>Sign Language Interpreter</h3>
+      <p><strong>What is it?</strong><br>
+Developed a real-time Sign Language Interpreter that translates hand gestures into corresponding text using a Convolutional Neural Network (CNN).
+
+Utilized OpenCV for live webcam capture and image preprocessing (resizing, thresholding, grayscale conversion).
+
+Trained the model on a dataset of sign language alphabets/numbers to classify gestures with high accuracy.
+
+Integrated the model into a GUI or terminal-based application that displays the predicted text in real-time.      <p><strong>Technologies Used:</strong></p>
+      <ul class="project-tags">
+        <li>MediaPipe</li>
+        <li>TensorFlow</li>
+        <li>Gesture Recognition</li>
+        <li>Computer Vision</li>
+        <li>NLP</li>
+      </ul>
+    </div>
+    <div class="project-card">
+      <h3>MNIST Handwritten Digit Recoginition</h3>
+      <p><strong>What is it?</strong><br>
+Built and trained a Convolutional Neural Network (CNN) model to classify handwritten digits using the MNIST dataset with 98%+ accuracy.
+
+Implemented data preprocessing, normalization, and data augmentation to enhance model performance.
+
+Optimized the model using techniques like Dropout, ReLU, Adam optimizer, and EarlyStopping to reduce overfitting.
+
+Visualized predictions using matplotlib and created a user input interface for real-time digit prediction.      <p><strong>Technologies Used:</strong></p>
+      <ul class="project-tags">
+
+        <li>Tensorflow</li>
+        <li>OpenCV</li>
+        <li>Python</li>
+        <li>Keras</li>
+        <li>Matplotlib</li>
+      </ul>
+    </div>
+        <div class="project-card">
+      <h3>Well Track</h3>
+      <p><strong>What is it?</strong><br>
+Ideated and contributed to the development of WellTrack, an innovative healthcare platform designed to empower patients with secure, instant access to their medical records, appointment scheduling, prescription management, and communication with healthcare providers. The platform includes advanced features such as hospital comparison tools (based on pricing, services, and success rates), first aid resources, and health education content—promoting informed decision-making, improved engagement, and cost-effective care delivery.      <p><strong>Technologies Used:</strong></p>
+      <ul class="project-tags">
+        <li>CSS</li>
+        <li>HTML</li>
+
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Add this in your HTML <head> -->
+  <!-- Add this to your HTML <head> -->
+
+
+
+
+<section class="skills-section" id="skills">
+  <div class="container skills-flex">
+    <div class="skills-text">
+      <h2>My creative skills & experiences.</h2>
+      <p>
+       Through my coursework and personal projects, I have built a solid foundation in web development with HTML, CSS, and JavaScript. Additionally, I have gained proficiency in Python and C++, which has enabled me to work on various projects, including those involving AI and machine learning. I am also skilled in using design tools like Canva to create visually appealing graphics. My hands-on experience with these technologies has allowed me to build interactive applications, develop algorithms, and design engaging user interfaces.
+      </p>
+    </div>
+
+    <div class="skills-bars">
+      <div class="skill" data-percent="90">
+        <div class="skill-name">C++ <span>90%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" data-percent="95">
+        <div class="skill-name">Python <span>95%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" data-percent="90">
+        <div class="skill-name">HTML <span>90%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" data-percent="93">
+        <div class="skill-name">CSS <span>93%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" data-percent="95">
+        <div class="skill-name">AI <span>95%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" data-percent="90">
+        <div class="skill-name">Machine Learning <span>90%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+      <div class="skill" data-percent="87">
+        <div class="skill-name">Canva <span>87%</span></div>
+        <div class="bar"><div class="progress"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <section class="hobbies" id="hobbies">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li>Programming: C++ & Python</li>
+        <li>HTML,CSS</li>
+        <li>Libraries: TensorFlow, Keras, OpenCV, Dlib, MediaPipe,scikit-learn,YOLO</li>
+        <li>ML: Supervised & Unsupervised Learning, Model Evaluation</li>
+        <li>Computer Vision: Object Detection, Image Processing</li>
+        <li>Soft Skills: Problem Solving, Time Management, Communication</li>
+      </ul>
+    </div>
+  </section>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div class="cv-download-section">
+  <a href="assets/Ishita_cv.pdf" download class="lavender-cv-button">
+    <i class="fas fa-download"></i> Download CV
+  </a>
+</div>
+
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:ishita15yadav2005@gmail.com">ishita15yadav2005@gmail.com</a></p>
+
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Ishita Yadav</p>
+    </div>
+  </footer>
+
+
+<script>
+  function animateSkills() {
+    const skills = document.querySelectorAll('.skill');
+    const windowHeight = window.innerHeight;
+
+    skills.forEach(skill => {
+      const rect = skill.getBoundingClientRect();
+      if (rect.top < windowHeight - 100) {
+        const bar = skill.querySelector('.progress');
+        const percent = skill.getAttribute('data-percent');
+        bar.style.width = percent + '%';
+      }
+    });
+  }
+
+  window.addEventListener("scroll", animateSkills);
+  window.addEventListener("load", animateSkills);
+</script>
+<script>
+  const typingText = ["Freelancer", "AI Developer", "ML Enthusiast"];
+  let index = 0;
+  let charIndex = 0;
+  let typingElement = document.querySelector(".typing");
+
+  function type() {
+    if (charIndex < typingText[index].length) {
+      typingElement.textContent += typingText[index].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, 100);
+    } else {
+      setTimeout(erase, 1500);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      typingElement.textContent = typingText[index].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, 50);
+    } else {
+      index = (index + 1) % typingText.length;
+      setTimeout(type, 500);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", type);
+</script>
+
+
+
+
+
+
+</body>
+</html>
 
